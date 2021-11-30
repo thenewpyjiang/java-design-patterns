@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>/Users/pyjiang/Documents/UIUC/academics/semester5_FA21/CS427/java-design-patterns/session-facade/src/main/java/com/iluwatar/sessionfacade</OriginalElement>
+  <nodes>
+    <node x="201.0" y="0.0">com.iluwatar.sessionfacade.SessionFacade</node>
+    <node x="295.0" y="251.0">com.iluwatar.sessionfacade.App</node>
+    <node x="0.0" y="105.0">com.iluwatar.sessionfacade.BusinessObject</node>
+    <node x="0.0" y="251.0">com.iluwatar.sessionfacade.SessionMaker</node>
+    <node x="402.0" y="105.5">com.iluwatar.sessionfacade.BusinessEntity</node>
+    <node x="198.0" y="105.5">com.iluwatar.sessionfacade.BusinessSession</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.iluwatar.sessionfacade.BusinessSession" target="com.iluwatar.sessionfacade.SessionFacade" relationship="REALIZATION">
+      <point x="0.0" y="-50.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="com.iluwatar.sessionfacade.BusinessEntity" target="com.iluwatar.sessionfacade.SessionFacade" relationship="REALIZATION">
+      <point x="0.0" y="-50.0" />
+      <point x="491.0" y="80.0" />
+      <point x="290.0" y="80.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="com.iluwatar.sessionfacade.BusinessObject" target="com.iluwatar.sessionfacade.SessionFacade" relationship="REALIZATION">
+      <point x="0.0" y="-50.5" />
+      <point x="89.0" y="80.0" />
+      <point x="290.0" y="80.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="290.0" y="220.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
