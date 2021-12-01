@@ -23,26 +23,50 @@
 
 package com.iluwatar.sessionfacade;
 
+/**
+ * Factory class for sessions
+ */
 public class SessionMaker {
 
-    private SessionFacade businessEntity;
-    private SessionFacade businessSession;
-    private SessionFacade businessObject;
- 
+    /**
+     * businessEntity to be demonstrated
+     */
+    private final SessionFacade businessEntity;
+    /**
+     * businessSession to be demonstrated
+     */
+    private final SessionFacade businessSession;
+    /**
+     * businessObject to be demonstrated
+     */
+    private final SessionFacade businessObject;
+
+    /**
+     * Initialize with demo objects
+     */
     public SessionMaker() {
         businessEntity = new BusinessEntity();
         businessSession = new BusinessSession();
         businessObject = new BusinessObject();
     }
- 
+
+    /**
+     * Indirect call to performAction of businessEntity
+     */
     public void businessEntityDemo(){
         businessEntity.performAction();
     }
 
+    /**
+     * Indirect call to performAction of businessSession
+     */
     public void businessSessionDemo(){
         businessSession.performAction();
     }
 
+    /**
+     * Indirect call to performAction of businessObject
+     */
     public void businessObjectDemo(){
         businessObject.performAction();
     }

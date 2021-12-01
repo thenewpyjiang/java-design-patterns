@@ -27,8 +27,6 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
-import com.iluwatar.sessionfacade.App;
-
 /**
  * Application test
  */

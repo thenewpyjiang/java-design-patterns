@@ -23,14 +23,18 @@
 
 package com.iluwatar.sessionfacade;
 
+/**
+ * Class representing business session
+ */
 public class BusinessSession implements SessionFacade {
 
     @Override
     public void performAction() {
         System.out.println("Business Session perform action");
+        displayData();
     }
 
-    public void displayData() {
+    private void displayData() {
         System.out.println("Display data from Business Object");
     }
 

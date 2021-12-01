@@ -23,14 +23,21 @@
 
 package com.iluwatar.sessionfacade;
 
+/**
+ * Representing business entity
+ */
 public class BusinessEntity implements SessionFacade {
 
+    /**
+     * Overriding inherited method of perform action
+     */
     @Override
     public void performAction() {
         System.out.println("Business Entity perform action");
+        requestData();
     }
 
-    public void requestData() {
+    private void requestData() {
         System.out.println("Request Data from Business Object");
     }
 

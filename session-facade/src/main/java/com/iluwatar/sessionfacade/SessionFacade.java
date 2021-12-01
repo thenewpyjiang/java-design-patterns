@@ -23,6 +23,9 @@
 
 package com.iluwatar.sessionfacade;
 
+/**
+ * Specifying interface for Session Facade
+ */
 public interface SessionFacade {
     void performAction();
 }

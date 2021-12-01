@@ -23,9 +23,27 @@
 
 package com.iluwatar.sessionfacade;
 
+/**
+ * Class representing business object
+ */
 public class BusinessObject implements SessionFacade {
 
     private Object dataObject;
+
+    /**
+     * Constructor for business object with no arguments
+     */
+    public BusinessObject() {
+        this.dataObject = new Object();
+    }
+
+    /**
+     * Constructor for business object with argument
+     * @param dataObject data object as argument for initialization
+     */
+    public BusinessObject(final Object dataObject) {
+        this.dataObject = dataObject;
+    }
 
     @Override
     public void performAction() {
@@ -36,7 +54,7 @@ public class BusinessObject implements SessionFacade {
         return dataObject;
     }
 
-    public void setDataObject(Object dataObject) {
+    public void setDataObject(final Object dataObject) {
         this.dataObject = dataObject;
     }
 

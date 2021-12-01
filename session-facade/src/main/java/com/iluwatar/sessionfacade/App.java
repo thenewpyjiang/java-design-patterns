@@ -23,9 +23,16 @@
 
 package com.iluwatar.sessionfacade;
 
+/**
+ * App Class acting as demo class
+ */
 public class App {
-    public static void main(String[] args) {
-        SessionMaker sessionMaker = new SessionMaker();
+    /**
+     * Main method for demo app
+     * @param args arguments
+     */
+    public static void main(final String[] args) {
+        final SessionMaker sessionMaker = new SessionMaker();
         sessionMaker.businessEntityDemo();
         sessionMaker.businessSessionDemo();
         sessionMaker.businessObjectDemo();
