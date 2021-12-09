@@ -23,19 +23,40 @@
 
 package com.iluwatar.sessionfacade;
 
+import java.util.logging.Logger;
+
 /**
- * Class representing business session
+ * Class representing business session under Session Facade.
  */
 public class BusinessSession implements SessionFacade {
 
+    /**
+     * Logger to simulate performing actual actions.
+     */
+    private Logger logger;
+
+    /**
+     * A constructor for Business Session that contains a logger
+     * @param logger The logger to be used for this Business Session
+     */
+    public BusinessSession(final Logger logger) {
+        this.logger = logger;
+    }
+
+    /**
+     * Implementation of performAction in Business Session
+     */
     @Override
     public void performAction() {
-        System.out.println("Business Session perform action");
+        logger.info("Business Session perform action");
         displayData();
     }
 
+    /**
+     * Representing data display from Business Object
+     */
     private void displayData() {
-        System.out.println("Display data from Business Object");
+        logger.info("Display data from Business Object");
     }
 
 }

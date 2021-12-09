@@ -24,12 +24,13 @@
 package com.iluwatar.sessionfacade;
 
 /**
- * App Class acting as demo class
+ * Main Class acting as demo class
  */
-public class App {
+public class SessionFacadeDemo {
+
     /**
      * Main method for demo app
-     * @param args arguments
+     * @param args arguments from command line
      */
     public static void main(final String[] args) {
         final SessionMaker sessionMaker = new SessionMaker();
@@ -37,4 +38,5 @@ public class App {
         sessionMaker.businessSessionDemo();
         sessionMaker.businessObjectDemo();
     }
+
 }

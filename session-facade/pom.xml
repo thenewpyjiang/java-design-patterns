@@ -48,7 +48,7 @@
             <configuration>
               <archive>
                 <manifest>
-                  <mainClass>com.iluwatar.sessionfacade.App</mainClass>
+                  <mainClass>com.iluwatar.sessionfacade.SessionFacadeDemo</mainClass>
                 </manifest>
               </archive>
             </configuration>

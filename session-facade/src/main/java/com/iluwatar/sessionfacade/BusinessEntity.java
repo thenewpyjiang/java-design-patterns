@@ -23,22 +23,36 @@
 
 package com.iluwatar.sessionfacade;
 
+import java.util.logging.Logger;
+
 /**
  * Representing business entity
  */
 public class BusinessEntity implements SessionFacade {
 
     /**
+     * Logger to simulate performing actual actions.
+     */
+    private Logger logger;
+
+    public BusinessEntity(final Logger logger) {
+        this.logger = logger;
+    }
+
+    /**
      * Overriding inherited method of perform action
      */
     @Override
     public void performAction() {
-        System.out.println("Business Entity perform action");
+        logger.info("Business Entity perform action");
         requestData();
     }
 
+    /**
+     * Simulating sending data request from Business Object
+     */
     private void requestData() {
-        System.out.println("Request Data from Business Object");
+        logger.info("Request Data from Business Object");
     }
 
 }

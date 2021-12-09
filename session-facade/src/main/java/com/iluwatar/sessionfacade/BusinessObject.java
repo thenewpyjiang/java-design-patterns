@@ -23,12 +23,22 @@
 
 package com.iluwatar.sessionfacade;
 
+import java.util.logging.Logger;
+
 /**
  * Class representing business object
  */
 public class BusinessObject implements SessionFacade {
 
+    /**
+     * Data object of business object
+     */
     private Object dataObject;
+
+    /**
+     * Logger to simulate performing actual actions.
+     */
+    private Logger logger;
 
     /**
      * Constructor for business object with no arguments
@@ -38,22 +48,43 @@ public class BusinessObject implements SessionFacade {
     }
 
     /**
+     * Constructor for BusinessObject that accepts a logger as argument
+     * @param logger The logger to log data
+     */
+    public BusinessObject(final Logger logger) {
+        this.logger = logger;
+    }
+
+    /**
      * Constructor for business object with argument
      * @param dataObject data object as argument for initialization
+     * @param logger Logger to log data
      */
-    public BusinessObject(final Object dataObject) {
+    public BusinessObject(final Object dataObject, final Logger logger) {
         this.dataObject = dataObject;
+        this.logger = logger;
     }
 
+    /**
+     * Implementation of generic perform action for the class BusinessObject
+     */
     @Override
     public void performAction() {
-       System.out.println("Business Object perform action");
+       logger.info("Business Object perform action");
     }
 
+    /**
+     * Getter for Data Object
+     * @return the data object
+     */
     public Object getDataObject() {
         return dataObject;
     }
 
+    /**
+     * Setter for data object
+     * @param dataObject data object value to set the one in this class
+     */
     public void setDataObject(final Object dataObject) {
         this.dataObject = dataObject;
     }

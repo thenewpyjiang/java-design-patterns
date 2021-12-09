@@ -30,10 +30,14 @@ import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 /**
  * Application test
  */
-class AppTest {
+class MainTest {
 
-  @Test
-  void shouldExecuteWithoutException() {
-    assertDoesNotThrow(() -> App.main(new String[]{}));
-  }
+    /**
+     * Generic test for the successful execution of the program
+     */
+    @Test
+    void shouldExecuteWithoutException() {
+        assertDoesNotThrow(() -> SessionFacadeDemo.main(new String[]{}));
+    }
+
 }

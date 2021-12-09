@@ -23,6 +23,8 @@
 
 package com.iluwatar.sessionfacade;
 
+import java.util.logging.Logger;
+
 /**
  * Factory class for sessions
  */
@@ -42,33 +44,36 @@ public class SessionMaker {
     private final SessionFacade businessObject;
 
     /**
-     * Initialize with demo objects
+     * This method initializes demo objects
      */
     public SessionMaker() {
-        businessEntity = new BusinessEntity();
-        businessSession = new BusinessSession();
-        businessObject = new BusinessObject();
+        businessEntity = new BusinessEntity(Logger.getLogger("BusinessEntity Logger"));
+        businessSession = new BusinessSession(Logger.getLogger("BusinessSession Logger"));
+        businessObject = new BusinessObject(Logger.getLogger("BusinessObject Logger"));
     }
 
     /**
      * Indirect call to performAction of businessEntity
      */
-    public void businessEntityDemo(){
+    public void businessEntityDemo() {
         businessEntity.performAction();
     }
 
     /**
      * Indirect call to performAction of businessSession
      */
-    public void businessSessionDemo(){
+    public void businessSessionDemo() {
         businessSession.performAction();
     }
 
     /**
      * Indirect call to performAction of businessObject
      */
-    public void businessObjectDemo(){
-        businessObject.performAction();
+    public void businessObjectDemo() {
+        final BusinessObject castedObject = (BusinessObject) businessObject;
+        castedObject.setDataObject("Data Object");
+        castedObject.getDataObject();
+        castedObject.performAction();
     }
 
 }
